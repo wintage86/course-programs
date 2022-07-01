@@ -1,0 +1,132 @@
+\hypertarget{group__stack_lib}{}\doxysection{Stack\+Lib}
+\label{group__stack_lib}\index{StackLib@{StackLib}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_stack}{Stack}}
+\begin{DoxyCompactList}\small\item\em main structure of stack \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__stack_lib_gac56a7f554b6c55b5873eac5a4d8610d6}\label{group__stack_lib_gac56a7f554b6c55b5873eac5a4d8610d6}} 
+enum {\bfseries Stack\+Status} \{ {\bfseries no\+Err}
+, {\bfseries error}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_stack}{Stack}} $\ast$ \mbox{\hyperlink{group__stack_lib_ga6e1c4fe8db748718d494eeb97a74fa35}{stack\+Ctor}} (const size\+\_\+t elem\+Size)
+\item 
+\mbox{\hyperlink{struct_stack}{Stack}} $\ast$ \mbox{\hyperlink{group__stack_lib_gafe88d540612aa52157717d4a5d4f56a4}{stack\+Dtor}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$s)
+\item 
+Stack\+Status \mbox{\hyperlink{group__stack_lib_gab2fa1e6c3cfa6ed4049fac0dda0960c8}{stack\+Push}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$s, const void $\ast$const elem)
+\begin{DoxyCompactList}\small\item\em function to push element in stack \end{DoxyCompactList}\item 
+Stack\+Status \mbox{\hyperlink{group__stack_lib_ga71371da2f65dca7fbb2afd55606da979}{stack\+Pop}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$s, void $\ast$elem)
+\begin{DoxyCompactList}\small\item\em function to delete element from stack \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__stack_lib_ga3114c352bd3efc4001a2e6a8ab026005}{stack\+Empty}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$s)
+\item 
+Stack\+Status \mbox{\hyperlink{group__stack_lib_ga5f073000c04a6c49b17bf9e2d2f74e25}{stack\+Top}} (\mbox{\hyperlink{struct_stack}{Stack}} $\ast$s, void $\ast$elem)
+\begin{DoxyCompactList}\small\item\em function to get top-\/element value \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+\begin{DoxyParams}{Parameters}
+{\em no\+Err} & \textquotesingle{}OK\textquotesingle{} status of stack \\
+\hline
+{\em error} & any error in execution process \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__stack_lib_ga6e1c4fe8db748718d494eeb97a74fa35}\label{group__stack_lib_ga6e1c4fe8db748718d494eeb97a74fa35}} 
+\index{StackLib@{StackLib}!stackCtor@{stackCtor}}
+\index{stackCtor@{stackCtor}!StackLib@{StackLib}}
+\doxysubsubsection{\texorpdfstring{stackCtor()}{stackCtor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_stack}{Stack}} $\ast$ stack\+Ctor (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{elem\+Size }\end{DoxyParamCaption})}
+
+@breif constructor of new stack @oaram elem\+Size size of element in this stack \begin{DoxySeeAlso}{See also}
+{\ttfamily \mbox{\hyperlink{group__stack_lib_gafe88d540612aa52157717d4a5d4f56a4}{stack\+Dtor}}} function 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__stack_lib_gafe88d540612aa52157717d4a5d4f56a4}\label{group__stack_lib_gafe88d540612aa52157717d4a5d4f56a4}} 
+\index{StackLib@{StackLib}!stackDtor@{stackDtor}}
+\index{stackDtor@{stackDtor}!StackLib@{StackLib}}
+\doxysubsubsection{\texorpdfstring{stackDtor()}{stackDtor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_stack}{Stack}} $\ast$ stack\+Dtor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+@breif destructor of new stack @oaram s stack example to destroy \begin{DoxySeeAlso}{See also}
+{\ttfamily \mbox{\hyperlink{group__stack_lib_ga6e1c4fe8db748718d494eeb97a74fa35}{stack\+Ctor}}} function 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__stack_lib_ga3114c352bd3efc4001a2e6a8ab026005}\label{group__stack_lib_ga3114c352bd3efc4001a2e6a8ab026005}} 
+\index{StackLib@{StackLib}!stackEmpty@{stackEmpty}}
+\index{stackEmpty@{stackEmpty}!StackLib@{StackLib}}
+\doxysubsubsection{\texorpdfstring{stackEmpty()}{stackEmpty()}}
+{\footnotesize\ttfamily bool stack\+Empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+@breif determines if the stack is empty 
+\begin{DoxyParams}{Parameters}
+{\em s} & stack example \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if stack is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__stack_lib_ga71371da2f65dca7fbb2afd55606da979}\label{group__stack_lib_ga71371da2f65dca7fbb2afd55606da979}} 
+\index{StackLib@{StackLib}!stackPop@{stackPop}}
+\index{stackPop@{stackPop}!StackLib@{StackLib}}
+\doxysubsubsection{\texorpdfstring{stackPop()}{stackPop()}}
+{\footnotesize\ttfamily Stack\+Status stack\+Pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{s,  }\item[{void $\ast$}]{elem }\end{DoxyParamCaption})}
+
+
+
+function to delete element from stack 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & stack example \\
+\hline
+{\em elem} & container to save old element \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+{\ttfamily \mbox{\hyperlink{group__stack_lib_gab2fa1e6c3cfa6ed4049fac0dda0960c8}{stack\+Push}}} function 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__stack_lib_gab2fa1e6c3cfa6ed4049fac0dda0960c8}\label{group__stack_lib_gab2fa1e6c3cfa6ed4049fac0dda0960c8}} 
+\index{StackLib@{StackLib}!stackPush@{stackPush}}
+\index{stackPush@{stackPush}!StackLib@{StackLib}}
+\doxysubsubsection{\texorpdfstring{stackPush()}{stackPush()}}
+{\footnotesize\ttfamily Stack\+Status stack\+Push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{s,  }\item[{const void $\ast$const}]{elem }\end{DoxyParamCaption})}
+
+
+
+function to push element in stack 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & stack example \\
+\hline
+{\em elem} & new element in stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+{\ttfamily \mbox{\hyperlink{group__stack_lib_ga71371da2f65dca7fbb2afd55606da979}{stack\+Pop}}} function 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__stack_lib_ga5f073000c04a6c49b17bf9e2d2f74e25}\label{group__stack_lib_ga5f073000c04a6c49b17bf9e2d2f74e25}} 
+\index{StackLib@{StackLib}!stackTop@{stackTop}}
+\index{stackTop@{stackTop}!StackLib@{StackLib}}
+\doxysubsubsection{\texorpdfstring{stackTop()}{stackTop()}}
+{\footnotesize\ttfamily Stack\+Status stack\+Top (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stack}{Stack}} $\ast$}]{s,  }\item[{void $\ast$}]{elem }\end{DoxyParamCaption})}
+
+
+
+function to get top-\/element value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & stack example \\
+\hline
+{\em elem} & container to save element\textquotesingle{}s value in the top of the stack \\
+\hline
+\end{DoxyParams}

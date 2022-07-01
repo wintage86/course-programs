@@ -1,0 +1,93 @@
+\hypertarget{group___set_lib}{}\doxysection{Set\+Lib}
+\label{group___set_lib}\index{SetLib@{SetLib}}
+
+
+\mbox{\hyperlink{struct_set}{Set}} library group.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_set}{Set}}
+\begin{DoxyCompactList}\small\item\em main {\itshape structure} of set main characteristics \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___set_lib_gabe680cd4acc6b374671b95d73780ec68}\label{group___set_lib_gabe680cd4acc6b374671b95d73780ec68}} 
+enum \mbox{\hyperlink{group___set_lib_gabe680cd4acc6b374671b95d73780ec68}{Set\+Status}} \{ \newline
+{\bfseries no\+Err}
+, {\bfseries insert\+Err}
+, {\bfseries erase\+Err}
+, {\bfseries find\+Err}
+, \newline
+{\bfseries size\+Err}
+, {\bfseries empty\+Err}
+, {\bfseries first\+Err}
+, {\bfseries print\+Err}
+ \}
+\begin{DoxyCompactList}\small\item\em main {\itshape  enumeration of stack } Each status refers to a specific function with the same name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_set}{Set}} $\ast$ \mbox{\hyperlink{group___set_lib_ga11c2308fd543d480b4bc726dd4c57608}{set\+Ctor}} (size\+\_\+t cardinality)
+\begin{DoxyCompactList}\small\item\em constructor of \mbox{\hyperlink{struct_set}{Set}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_set}{Set}} $\ast$ \mbox{\hyperlink{group___set_lib_gaee19668b2893f95f4246847843d99e97}{set\+Dtor}} (\mbox{\hyperlink{struct_set}{Set}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em set destructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___set_lib_gabe680cd4acc6b374671b95d73780ec68}{Set\+Status}} \mbox{\hyperlink{group___set_lib_gaa7b12beb043e601d58b0ef3a5d029699}{insert}} (\mbox{\hyperlink{struct_set}{Set}} $\ast$s, set\+\_\+t elem)
+\begin{DoxyCompactList}\small\item\em insert function to add \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{struct_set}{Set}} library group. 
+
+\doxygenemoji{\+:speech\+\_\+balloon\+:}{speech_balloon} The set provides several functions that provide a standard abstraction.
+
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{group___set_lib_ga11c2308fd543d480b4bc726dd4c57608}{set\+Ctor}}} \item {\ttfamily \mbox{\hyperlink{group___set_lib_gaee19668b2893f95f4246847843d99e97}{set\+Dtor}}} \item {\ttfamily \mbox{\hyperlink{group___set_lib_gaa7b12beb043e601d58b0ef3a5d029699}{insert}}} \item {\ttfamily \mbox{\hyperlink{}{erase}}} \item {\ttfamily \mbox{\hyperlink{}{find}}} \end{DoxyItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___set_lib_gaa7b12beb043e601d58b0ef3a5d029699}\label{group___set_lib_gaa7b12beb043e601d58b0ef3a5d029699}} 
+\index{SetLib@{SetLib}!insert@{insert}}
+\index{insert@{insert}!SetLib@{SetLib}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___set_lib_gabe680cd4acc6b374671b95d73780ec68}{Set\+Status}} insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_set}{Set}} $\ast$}]{s,  }\item[{set\+\_\+t}]{elem }\end{DoxyParamCaption})}
+
+
+
+insert function to add 
+
+new value in set
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & {\bfseries{{\ttfamily \mbox{\hyperlink{_set}{Set}}} structure }} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___set_lib_ga11c2308fd543d480b4bc726dd4c57608}\label{group___set_lib_ga11c2308fd543d480b4bc726dd4c57608}} 
+\index{SetLib@{SetLib}!setCtor@{setCtor}}
+\index{setCtor@{setCtor}!SetLib@{SetLib}}
+\doxysubsubsection{\texorpdfstring{setCtor()}{setCtor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_set}{Set}} $\ast$ set\+Ctor (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{cardinality }\end{DoxyParamCaption})}
+
+
+
+constructor of \mbox{\hyperlink{struct_set}{Set}} 
+
+\begin{DoxyItemize}
+\item cardinality capacity of new \mbox{\hyperlink{struct_set}{Set}}. \end{DoxyItemize}
+\mbox{\Hypertarget{group___set_lib_gaee19668b2893f95f4246847843d99e97}\label{group___set_lib_gaee19668b2893f95f4246847843d99e97}} 
+\index{SetLib@{SetLib}!setDtor@{setDtor}}
+\index{setDtor@{setDtor}!SetLib@{SetLib}}
+\doxysubsubsection{\texorpdfstring{setDtor()}{setDtor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_set}{Set}} $\ast$ set\+Dtor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_set}{Set}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+set destructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & {\bfseries{{\ttfamily \mbox{\hyperlink{_set}{Set}}} structure }} \\
+\hline
+\end{DoxyParams}

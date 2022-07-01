@@ -1,0 +1,122 @@
+\hypertarget{group___vector_lib}{}\doxysection{Vector\+Lib}
+\label{group___vector_lib}\index{VectorLib@{VectorLib}}
+
+
+implementation of simple structure vector  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_vector}{Vector}}
+\begin{DoxyCompactList}\small\item\em vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_vector}{Vector}} $\ast$ \mbox{\hyperlink{group___vector_lib_gaf587134d2630f8af518a5177a13f2134}{vector\+\_\+new}} (size\+\_\+t elems, size\+\_\+t elem\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Creates new {\ttfamily \mbox{\hyperlink{struct_vector}{Vector}}} {\itshape structure}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___vector_lib_gabeacec860e3d0b3ca45520bb8ad5446a}\label{group___vector_lib_gabeacec860e3d0b3ca45520bb8ad5446a}} 
+\mbox{\hyperlink{struct_vector}{Vector}} $\ast$ {\bfseries vector\+\_\+delete} (\mbox{\hyperlink{struct_vector}{Vector}} $\ast$v)
+\item 
+\mbox{\Hypertarget{group___vector_lib_ga6c1dc36aa4d035e7169a816e79d4e219}\label{group___vector_lib_ga6c1dc36aa4d035e7169a816e79d4e219}} 
+int {\bfseries vector\+\_\+push} (\mbox{\hyperlink{struct_vector}{Vector}} $\ast$v, const void $\ast$elem)
+\item 
+\mbox{\Hypertarget{group___vector_lib_ga9797f2f082b50df6adb003eaf154d533}\label{group___vector_lib_ga9797f2f082b50df6adb003eaf154d533}} 
+int {\bfseries vector\+\_\+pop} (\mbox{\hyperlink{struct_vector}{Vector}} $\ast$v, void $\ast$elem)
+\item 
+\mbox{\Hypertarget{group___vector_lib_ga6ecc3974f8d3ad341f98b5758fcb6284}\label{group___vector_lib_ga6ecc3974f8d3ad341f98b5758fcb6284}} 
+int {\bfseries vector\+\_\+empty} (\mbox{\hyperlink{struct_vector}{Vector}} $\ast$v)
+\item 
+\mbox{\Hypertarget{group___vector_lib_gac554ceae118a350033ff8ac23d6a7478}\label{group___vector_lib_gac554ceae118a350033ff8ac23d6a7478}} 
+int {\bfseries vector\+\_\+print} (\mbox{\hyperlink{struct_vector}{Vector}} $\ast$v, void($\ast$printfunction)(const void $\ast$data))
+\item 
+int \mbox{\hyperlink{group___vector_lib_ga932975d3a84800a15a6a1d3dcfe2f87f}{vector\+\_\+set}} (\mbox{\hyperlink{struct_vector}{Vector}} $\ast$v, size\+\_\+t index, void $\ast$elem)
+\begin{DoxyCompactList}\small\item\em set value in vector to value {\itshape index} \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group___vector_lib_ga603ef4dc1a06d37f342a57abf5e907d6}{vector\+\_\+get}} (\mbox{\hyperlink{struct_vector}{Vector}} $\ast$v, size\+\_\+t index, void $\ast$elem)
+\begin{DoxyCompactList}\small\item\em get value from vector \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___vector_lib_gafa9140aa2e10d6681a2739f0cdb78aa5}\label{group___vector_lib_gafa9140aa2e10d6681a2739f0cdb78aa5}} 
+const size\+\_\+t {\bfseries INCREASE\+\_\+\+FACTOR} = 2
+\begin{DoxyCompactList}\small\item\em used as coefficient in {\ttfamily \mbox{\hyperlink{}{vector\+\_\+resize}}} to resize vector capacity \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+implementation of simple structure vector 
+
+In contrast to {\ttfamily \mbox{\hyperlink{group__stack_lib}{stack\+Lib}}} in {\bfseries{vector{\bfseries{ you can control all elements in it. }}}}
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___vector_lib_ga603ef4dc1a06d37f342a57abf5e907d6}\label{group___vector_lib_ga603ef4dc1a06d37f342a57abf5e907d6}} 
+\index{VectorLib@{VectorLib}!vector\_get@{vector\_get}}
+\index{vector\_get@{vector\_get}!VectorLib@{VectorLib}}
+\doxysubsubsection{\texorpdfstring{vector\_get()}{vector\_get()}}
+{\footnotesize\ttfamily int vector\+\_\+get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} $\ast$}]{v,  }\item[{size\+\_\+t}]{index,  }\item[{void $\ast$}]{elem }\end{DoxyParamCaption})}
+
+
+
+get value from vector 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & coordinate in vector data of particular element \\
+\hline
+\mbox{\texttt{ out}}  & {\em elem} & new value. \\
+\hline
+\mbox{\texttt{ out}}  & {\em v} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/ succsess \\
+\hline
+{\em 1} & -\/ error \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___vector_lib_gaf587134d2630f8af518a5177a13f2134}\label{group___vector_lib_gaf587134d2630f8af518a5177a13f2134}} 
+\index{VectorLib@{VectorLib}!vector\_new@{vector\_new}}
+\index{vector\_new@{vector\_new}!VectorLib@{VectorLib}}
+\doxysubsubsection{\texorpdfstring{vector\_new()}{vector\_new()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_vector}{Vector}} $\ast$ vector\+\_\+new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{elems,  }\item[{size\+\_\+t}]{elem\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Creates new {\ttfamily \mbox{\hyperlink{struct_vector}{Vector}}} {\itshape structure}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elems} & start capacity of vector \\
+\hline
+{\em elem\+\_\+size} & size of element in vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{struct_vector}{Vector}}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group___vector_lib_ga932975d3a84800a15a6a1d3dcfe2f87f}\label{group___vector_lib_ga932975d3a84800a15a6a1d3dcfe2f87f}} 
+\index{VectorLib@{VectorLib}!vector\_set@{vector\_set}}
+\index{vector\_set@{vector\_set}!VectorLib@{VectorLib}}
+\doxysubsubsection{\texorpdfstring{vector\_set()}{vector\_set()}}
+{\footnotesize\ttfamily int vector\+\_\+set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector}{Vector}} $\ast$}]{v,  }\item[{size\+\_\+t}]{index,  }\item[{void $\ast$}]{elem }\end{DoxyParamCaption})}
+
+
+
+set value in vector to value {\itshape index} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & coordinate in vector data of particular element \\
+\hline
+\mbox{\texttt{ in}}  & {\em elem} & new value. \\
+\hline
+\mbox{\texttt{ out}}  & {\em v} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & -\/ succsess \\
+\hline
+{\em 1} & -\/ error \\
+\hline
+\end{DoxyRetVals}
